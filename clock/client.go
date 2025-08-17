@@ -14,7 +14,7 @@ type DSyncClock struct {
 	Diff          int64
 }
 
-func (d *DSyncClock) doSync() {
+func (d *DSyncClock) DoSync() {
 	// Connect to the server
 	conn, err := net.Dial("tcp", d.ServerAddress)
 	if err != nil {
