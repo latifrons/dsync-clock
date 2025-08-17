@@ -3,7 +3,7 @@ FROM golang:1.24.5-bookworm AS buildergo
 #RUN useradd -m builder
 WORKDIR /app/go
 
-ADD ./go.mod ./go.sum ./
+ADD ./go.mod ./
 RUN go mod download
 
 COPY . .
