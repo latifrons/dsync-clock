@@ -35,7 +35,7 @@ func handleClient(conn net.Conn) {
 
 	// Get current time in nanoseconds
 	currentTime := time.Now().UnixNano()
-	timeStr := fmt.Sprintf("%d\n", currentTime)
+	timeStr := fmt.Sprintf("%d", currentTime)
 
 	// Send the time to the client
 	_, err := conn.Write([]byte(timeStr))
